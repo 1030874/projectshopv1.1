@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dmaa0214_4Sem_ReneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="accountName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="accountPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="accountRole" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="accountId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productCategory" Type="Int32" Nullable="false" />
+    <Property Name="productName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="productDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="productRegularPrice" Type="Int32" Nullable="false" />
+    <Property Name="productSalePrice" Type="Int32" Nullable="false" />
+    <Property Name="productQuantity" Type="Int32" Nullable="false" />
+    <Property Name="productStatus" Type="Int32" Nullable="false" />
+    <Property Name="productImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="productImageAltText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="dmaa0214_4Sem_ReneEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+  </EntityContainer>
+</Schema>

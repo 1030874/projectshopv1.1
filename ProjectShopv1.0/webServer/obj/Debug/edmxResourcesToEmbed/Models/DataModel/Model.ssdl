@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dmaa0214_4Sem_ReneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="accountName" Type="nvarchar(max)" />
+    <Property Name="accountPassword" Type="nvarchar(max)" />
+    <Property Name="accountRole" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar(max)" />
+    <Property Name="lastName" Type="nvarchar(max)" />
+    <Property Name="accountId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="productCategory" Type="int" Nullable="false" />
+    <Property Name="productName" Type="nvarchar(max)" />
+    <Property Name="productDescription" Type="nvarchar(max)" />
+    <Property Name="productRegularPrice" Type="int" Nullable="false" />
+    <Property Name="productSalePrice" Type="int" Nullable="false" />
+    <Property Name="productQuantity" Type="int" Nullable="false" />
+    <Property Name="productStatus" Type="int" Nullable="false" />
+    <Property Name="productImage" Type="nvarchar(max)" />
+    <Property Name="productImageAltText" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="dmaa0214_4Sem_ReneModelStoreContainer">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

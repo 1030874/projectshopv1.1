@@ -1,0 +1,90 @@
+﻿@model webServer.Models.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.productCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productRegularPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productRegularPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productSalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productSalePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productImageAltText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productImageAltText)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

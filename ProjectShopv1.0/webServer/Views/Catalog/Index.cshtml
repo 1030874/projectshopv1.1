@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+
+ <!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h2 class="page-header">Products</h2>
+        </div>
+
+
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Product catalog
+                </div>
+                <div class="panel-body">
+
+                    <a href="@Url.Action("Index", "Products")">
+                        <img src="@Url.Content("~/Content/Images/Root/cart.jpg")" class="img-responsive" />
+                    </a>
+             
+                    @*<a class="" href="../Views/Products/Index.cshtml">
+                        <img class="img-responsive" src="~/Content/Images/Root/cart.jpg" alt="">
+
+                    </a>*@
+
+                </div>
+            </div>
+         
+            </div>
+
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Orders
+                </div>
+                <div class="panel-body">
+                    <a class="" href="#">
+                        <img class="img-responsive" src="~/Content/Images/Root/basket.jpg" alt="">
+
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Top Sales
+                </div>
+                <div class="panel-body">
+                    <a class="" href="#">
+                        <img class="img-responsive" src="~/Content/Images/Root/thumbsup.jpg" alt="">
+
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                   Feedback
+                </div>
+                <div class="panel-body">
+                    <a class="" href="#">
+                        <img class="img-responsive" src="~/Content/Images/Root/star.jpg" alt="">
+
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

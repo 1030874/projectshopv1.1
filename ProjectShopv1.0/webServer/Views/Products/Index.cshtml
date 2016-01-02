@@ -1,0 +1,99 @@
+﻿@model IEnumerable<webServer.Models.Products>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+  
+
+<div class="col-lg-12">
+    <div class="col-lg-6">
+@using (Html.BeginForm("Search", "Products", FormMethod.Get))
+{
+    @Html.TextBox("search", null, new { @class = "form-control" } ) @*<input type="submit" value="search" />*@
+}
+    </div>
+
+    <div class="col-lg-6 ">
+        @Html.ActionLink("Tilføj produkt", "Create", "Create", new { @class = "pull-right btn btn-success" })
+    </div>
+
+</div>
+
+<br />
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.productCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productRegularPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productSalePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productImageAltText)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.productCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productRegularPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productSalePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productImageAltText)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

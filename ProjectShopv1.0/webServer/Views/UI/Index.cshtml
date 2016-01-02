@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="col-lg-12">
+    <h2 class="page-header">Catalog</h2>
+</div>
+
+
+<div class="col-lg-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            My Account
+        </div>
+
+        <div class="panel-body">
+            Username: @Html.Raw(ViewBag.Username)
+        </div>
+    </div>
+</div>
+<div class="col-lg-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            New Customers
+        </div>
+
+        <div class="panel-body">
+          @foreach (var customer in ViewBag.List) 
+          {
+           
+              @customer.firstName
+    <br />
+          }
+        </div>
+    </div>
+</div>
+<div class="col-lg-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Webmail
+        </div>
+
+        <div class="panel-body">
+            You can store tasks here! Please register or login.
+        </div>
+    </div>
+</div>
+<div class="col-lg-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Monitoring
+        </div>
+
+        <div class="panel-body">
+            You can store tasks here! Please register or login.
+        </div>
+    </div>
+</div>
+

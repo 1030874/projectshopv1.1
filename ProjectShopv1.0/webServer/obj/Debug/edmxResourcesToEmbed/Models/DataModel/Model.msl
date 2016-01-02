@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dmaa0214_4Sem_ReneModelStoreContainer" CdmEntityContainer="dmaa0214_4Sem_ReneEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="dmaa0214_4Sem_ReneModel.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="accountName" ColumnName="accountName" />
+          <ScalarProperty Name="accountPassword" ColumnName="accountPassword" />
+          <ScalarProperty Name="accountRole" ColumnName="accountRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="dmaa0214_4Sem_ReneModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="accountId" ColumnName="accountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="dmaa0214_4Sem_ReneModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="productCategory" ColumnName="productCategory" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+          <ScalarProperty Name="productDescription" ColumnName="productDescription" />
+          <ScalarProperty Name="productRegularPrice" ColumnName="productRegularPrice" />
+          <ScalarProperty Name="productSalePrice" ColumnName="productSalePrice" />
+          <ScalarProperty Name="productQuantity" ColumnName="productQuantity" />
+          <ScalarProperty Name="productStatus" ColumnName="productStatus" />
+          <ScalarProperty Name="productImage" ColumnName="productImage" />
+          <ScalarProperty Name="productImageAltText" ColumnName="productImageAltText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
